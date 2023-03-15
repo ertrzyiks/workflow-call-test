@@ -7,4 +7,6 @@ jobs:
     name: workflow
     runs-on: ubuntu-latest
     steps:
-     - run: echo OK
+     - run: echo $SHA
+       env:
+         SHA: ${{ github.sha }}
